@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>История | Альметьевская энциклопедия</title>
+    <meta name="description"
+        content="История Альметьевского района — от древнейших времен до наших дней. Археологические находки, исторические события, этнография и традиции.">
+    <meta name="keywords" content="Альметьевск, история, археология, этнография, традиции, исторические события">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #1e293b;
+            background: #fefefe;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 20px;
+            background: #0f5e3f;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #eef2ff;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-icon img {
+            height: 44px;
+            width: auto;
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0a2b1f;
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .search-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .search-form {
+            display: flex;
+            background: #f8fafc;
+            border-radius: 48px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .search-input {
+            padding: 10px 18px;
+            border: none;
+            background: transparent;
+            width: 260px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            padding: 0 18px;
+            cursor: pointer;
+            color: #1a9b6e;
+        }
+
+        .mobile-buttons {
+            display: none;
+            gap: 12px;
+        }
+
+        .mobile-btn {
+            background: #f1f5f9;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: url('/img/image\ 3.png') center/cover no-repeat;
+            margin-top: 0;
+            padding: 80px 0 0 0;
+            position: relative;
+            min-height: 580px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            max-width: 700px;
+            padding: 40px 0 60px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            color: #e2f0ea;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e8f0ed;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #0f5e3f;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0f5e3f;
+        }
+
+        .hero-nav {
+            position: relative;
+            z-index: 2;
+            background: transparent;
+            padding: 20px 0 30px;
+            margin-top: auto;
+        }
+
+        .nav-lines {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-line-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-line-item a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-line {
+            height: 2px;
+            background: rgba(26, 155, 110, 0.7);
+            margin-bottom: 10px;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .nav-line-item.active .nav-line {
+            background: #c06b4a;
+        }
+
+        .nav-line-item span {
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.3px;
+            transition: color 0.2s;
+            display: block;
+        }
+
+        .nav-line-item:hover .nav-line {
+            background: #c06b4a;
+        }
+
+        .nav-line-item:hover span {
+            color: white;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .page-title {
+            margin-bottom: 48px;
+        }
+
+        .page-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0a2b1f;
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .page-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1a9b6e;
+            border-radius: 2px;
+        }
+
+        .page-title p {
+            color: #475569;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0a2b1f;
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eef2ff;
+        }
+
+        .section-title i {
+            color: #1a9b6e;
+            margin-right: 12px;
+        }
+
+        .history-section {
+            background: white;
+            border-radius: 32px;
+            padding: 40px;
+            margin-bottom: 48px;
+            border: 1px solid #eef2ff;
+            transition: all 0.3s;
+        }
+
+        .history-section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            border-color: #1a9b6e;
+        }
+
+        .history-section h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0a2b1f;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .history-section h3 i {
+            color: #1a9b6e;
+            font-size: 28px;
+        }
+
+        .history-section p {
+            color: #334155;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 17px;
+        }
+
+        .history-section .highlight {
+            background: #f0fdf4;
+            padding: 24px;
+            border-radius: 20px;
+            margin: 24px 0;
+            border-left: 4px solid #1a9b6e;
+        }
+
+        .history-section .highlight p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #166534;
+        }
+
+        .timeline {
+            margin: 32px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eef2ff;
+        }
+
+        .timeline-year {
+            min-width: 100px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a9b6e;
+        }
+
+        .timeline-text {
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .editorial {
+            background: #f8fafc;
+            border-radius: 32px;
+            padding: 48px;
+            margin: 64px 0;
+            border-left: 6px solid #1a9b6e;
+        }
+
+        .editorial h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .editorial p {
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .editorial a {
+            color: #1a9b6e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #1a9b6e;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #1e293b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-lines {
+                gap: 12px;
+            }
+
+            .nav-line-item span {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .hero {
+                min-height: 500px;
+                padding: 40px 0 0 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero-content {
+                text-align: center;
+                padding: 20px 0 30px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .search-wrapper {
+                display: none;
+            }
+
+            .mobile-buttons {
+                display: flex;
+            }
+
+            .nav-lines {
+                gap: 12px;
+            }
+
+            .nav-line-item {
+                min-width: calc(25% - 9px);
+            }
+
+            .nav-line-item span {
+                font-size: 9px;
+            }
+
+            .page-title h2 {
+                font-size: 28px;
+            }
+
+            .page-title p {
+                font-size: 14px;
+            }
+
+            .history-section {
+                padding: 24px;
+            }
+
+            .history-section h3 {
+                font-size: 24px;
+            }
+
+            .history-section p {
+                font-size: 15px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .timeline-year {
+                min-width: auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .editorial {
+                padding: 32px;
+            }
+
+            .editorial h3 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-outline {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .nav-line-item {
+                min-width: calc(50% - 6px);
+            }
+
+            .nav-line-item span {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#main" class="skip-link">Перейти к основному контенту</a>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><img src="/img/image 1.png" alt="Татнефть"></div>
+                    <div class="logo-text">
+                        <h1>Альметьевская энциклопедия</h1>
+                        <p>история • культура • наследие</p>
+                    </div>
+                </a>
+               
+                <div class="mobile-buttons">
+                    <button class="mobile-btn" id="mobileSearchBtn"><i class="fas fa-search"></i></button>
+                    <button class="mobile-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-scroll"></i> История края</span>
+                <h1>История Альметьевского<br>района</h1>
+                <p>От древнейших времен до наших дней — археологические находки, исторические события, этнография и
+                    традиции народов, населяющих эту землю.</p>
+                <div class="hero-buttons">
+                    <a href="#ancient" class="btn-primary">Древняя история →</a>
+                    <a href="#modern" class="btn-outline">Новейшее время</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-nav">
+            <div class="container">
+                <div class="nav-lines">
+                    <div class="nav-line-item" data-section="almetevskiy-rayon">
+                        <a href="index.html">
+                            <div class="nav-line"></div>
+                            <span>Альметьевский район</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="naselennie-punkti">
+                        <a href="naselenniye_punkty.html">
+                            <div class="nav-line"></div>
+                            <span>Населённые пункты</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="istoriya">
+                        <a href="istoriya.html">
+                            <div class="nav-line"></div>
+                            <span>История</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="kultura">
+                        <a href="kultura.html">
+                            <div class="nav-line"></div>
+                            <span>Культура</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="proizvodstvo">
+                        <a href="proizvodstvo.html">
+                            <div class="nav-line"></div>
+                            <span>Производство</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="sotsialnaya-sfera">
+                        <a href="sotsialnaya-sfera.html">
+                            <div class="nav-line"></div>
+                            <span>Социальная сфера</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="personalii">
+                        <a href="personalii.html">
+                            <div class="nav-line"></div>
+                            <span>Персоналии</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="spisok-sokrashcheniy">
+                        <a href="spisok-sokrashcheniy.html">
+                            <div class="nav-line"></div>
+                            <span>Список сокращений</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <div class="container">
+            <div class="page-title">
+                <h2><i class="fas fa-scroll"></i> История края</h2>
+                <p>История Альметьевского района насчитывает не одно тысячелетие. Здесь переплелись судьбы разных
+                    народов, сохранились уникальные памятники археологии, архитектуры и культуры.</p>
+            </div>
+
+            <div id="ancient" class="history-section">
+                <h3><i class="fas fa-archaeology"></i> Древнейшая история</h3>
+                <p>Территория современного Альметьевского района была заселена с глубокой древности. Археологические
+                    раскопки свидетельствуют о присутствии здесь людей еще в эпоху бронзы (II тысячелетие до н. э.).
+                    Найдены многочисленные курганные захоронения, поселения и городища, относящиеся к срубной и
+                    абашевской культурам.</p>
+                <div class="highlight">
+                    <p><i class="fas fa-shovel" style="margin-right: 12px; color: #1a9b6e;"></i> Наиболее значимые
+                        археологические памятники — городище «Кузайкинское», курганные могильники в окрестностях сел
+                        Абдрахманово, Елхово, а также уникальные находки скифо-сарматского периода.</p>
+                </div>
+                <p>В раннем средневековье эти земли входили в состав Волжской Булгарии. Об этом свидетельствуют
+                    многочисленные булгарские поселения и захоронения, найденные на территории района. В XIII веке край
+                    был завоеван монголами и вошел в состав Золотой Орды.</p>
+            </div>
+
+            <div class="history-section">
+                <h3><i class="fas fa-church"></i> В составе Русского государства</h3>
+                <p>После падения Казанского ханства в 1552 году земли Закамья постепенно входят в состав Русского
+                    государства. Активное заселение территории началось в XVII–XVIII веках. В это время возникают многие
+                    села и деревни, существующие до наших дней.</p>
+                <p>В XVIII веке край входит в состав Оренбургской губернии, а затем — Самарской. Население занималось
+                    земледелием, скотоводством, развивались ремесла. Важную роль в жизни региона играл Бугульминский
+                    уезд, к которому относилась большая часть современного Альметьевского района.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1730-1740-е гг.</div>
+                        <div class="timeline-text">Основание первых русских и татарских сел на территории района.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1773-1775 гг.</div>
+                        <div class="timeline-text">Крестьянская война под предводительством Емельяна Пугачева. Местное
+                            население активно поддерживало восставших.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">XIX век</div>
+                        <div class="timeline-text">Развитие торговли, строительство мечетей и церквей, открытие школ.
+                            Село Альметьево (ныне Альметьевск) становится волостным центром.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h3><i class="fas fa-oil-can"></i> Открытие нефти и индустриальное развитие</h3>
+                <p>Переломным моментом в истории края стало открытие в 1943 году Ромашкинского нефтяного месторождения —
+                    одного из крупнейших в мире. Это событие навсегда изменило судьбу региона, превратив его в центр
+                    нефтяной промышленности Татарстана.</p>
+                <div class="highlight">
+                    <p><i class="fas fa-tint" style="margin-right: 12px; color: #1a9b6e;"></i> 1943 год — начало бурения
+                        первой разведочной скважины. 1948 год — получение промышленного притока нефти. С этого момента
+                        начинается активное освоение месторождения, строительство поселков и развитие инфраструктуры.
+                    </p>
+                </div>
+                <p>В 1953 году рабочий поселок Альметьево получает статус города и название Альметьевск. Начинается
+                    активное строительство жилых домов, школ, больниц, объектов культуры. В регион приезжают специалисты
+                    со всего Советского Союза, формируется уникальная культурная среда.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1948 г.</div>
+                        <div class="timeline-text">Получение фонтана нефти на скважине № 3. Начало промышленной
+                            разработки Ромашкинского месторождения.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1953 г.</div>
+                        <div class="timeline-text">Альметьевск получает статус города. Начало активного строительства.
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1956 г.</div>
+                        <div class="timeline-text">Образование нефтепроводного управления «Альметьевскнефтепровод».
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1970-1980 гг.</div>
+                        <div class="timeline-text">Расцвет города, строительство крупных промышленных и социальных
+                            объектов.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h3><i class="fas fa-landmark"></i> Современная история</h3>
+                <p>С 1990-х годов Альметьевск и район продолжают развиваться как крупный промышленный и культурный
+                    центр. Сохраняя традиции нефтяного края, регион активно развивает социальную инфраструктуру, спорт,
+                    образование и культуру.</p>
+                <p>В 1995 году начинает работу фонд «Альметьевская энциклопедия», который занимается сбором и
+                    систематизацией материалов по истории края. В 2000-е годы реализуются масштабные проекты по
+                    благоустройству, строительству новых школ, спортивных комплексов, объектов культуры.</p>
+                <p>Сегодня Альметьевский район — это динамично развивающаяся территория, где бережно хранят историческое
+                    наследие и создают будущее. Здесь работают краеведческий музей, картинная галерея, действуют
+                    многочисленные творческие коллективы, проводятся фестивали и конкурсы, сохраняющие и развивающие
+                    культуру народов, населяющих этот край.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1995 г.</div>
+                        <div class="timeline-text">Создание фонда «Альметьевская энциклопедия».</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2000-2010 гг.</div>
+                        <div class="timeline-text">Активное развитие социальной инфраструктуры, строительство спортивных
+                            объектов, реконструкция исторических зданий.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2016-2019 гг.</div>
+                        <div class="timeline-text">Обновление материалов энциклопедии творческой группой Института
+                            истории им. Ш. Марджани АН РТ.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editorial">
+                <h3><i class="fas fa-book"></i> Сохраняя историю для будущих поколений</h3>
+                <p>Альметьевская энциклопедия — это результат многолетней работы историков, краеведов и всех, кто
+                    бережно относится к прошлому своего края. Мы продолжаем собирать материалы, уточнять факты и
+                    дополнять летопись нашей малой родины.</p>
+                <p><strong>Ваши замечания, дополнения и исправления очень важны для нас.</strong> Если у вас есть старые
+                    фотографии, документы, семейные архивы или интересные воспоминания, поделитесь ими с нашими
+                    читателями. Вместе мы сохраним историю для будущих поколений.</p>
+                <p>Просим направлять материалы по адресу <a href="mailto:Ruhiat@tatneft.ru">Ruhiat@tatneft.ru</a> или
+                    через форму «Дополнить энциклопедию».</p>
+                <p style="margin-top: 20px;">— <strong>Редакционная коллегия</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>О проекте</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">Альметьевская энциклопедия — уникальный краеведческий
+                        ресурс, созданный при поддержке ПАО «Татнефть».</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="index.html">Альметьевский район</a></li>
+                        <li><a href="istoriya.html">История</a></li>
+                        <li><a href="kultura.html">Культура</a></li>
+                        <li><a href="personalii.html">Персоналии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="spisok-sokrashcheniy.html">Список сокращений</a></li>
+                        <li><a href="#">Правовая информация</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="mailto:Ruhiat@tatneft.ru">Ruhiat@tatneft.ru</a></li>
+                        <li><a href="#">Дополнить энциклопедию</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2006—2026 ПАО «Татнефть». Все права защищены.</p>
+                <p style="margin-top: 8px; font-size: 12px;">Альметьевская энциклопедия — сохраняя историю для будущих
+                    поколений</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const currentPage = window.location.pathname.split('/').pop() || 'istoriya.html'
+
+        const navLinks = document.querySelectorAll('.nav-line-item a')
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href')
+            if (href === currentPage) {
+                const parentItem = link.closest('.nav-line-item')
+                if (parentItem) {
+                    parentItem.classList.add('active')
+                }
+            }
+        })
+
+        const searchBtn = document.getElementById('mobileSearchBtn')
+        const menuBtn = document.getElementById('mobileMenuBtn')
+
+        if (searchBtn) {
+            searchBtn.addEventListener('click', () => {
+                alert('Поиск по энциклопедии — введите запрос')
+            })
+        }
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const navLines = document.querySelector('.nav-lines')
+                if (navLines) {
+                    navLines.style.display = navLines.style.display === 'flex' ? 'none' : 'flex'
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
