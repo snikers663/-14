@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Населённые пункты | Альметьевская энциклопедия</title>
+    <meta name="description"
+        content="Населённые пункты Альметьевского района — города, сёла, деревни. История, население, достопримечательности и известные жители.">
+    <meta name="keywords"
+        content="Альметьевск, населенные пункты, села, деревни, Альметьевский район, история поселений">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #1e293b;
+            background: #fefefe;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 20px;
+            background: #0f5e3f;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #eef2ff;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-icon img {
+            height: 44px;
+            width: auto;
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0a2b1f;
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .search-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .search-form {
+            display: flex;
+            background: #f8fafc;
+            border-radius: 48px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .search-input {
+            padding: 10px 18px;
+            border: none;
+            background: transparent;
+            width: 260px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            padding: 0 18px;
+            cursor: pointer;
+            color: #1a9b6e;
+        }
+
+        .mobile-buttons {
+            display: none;
+            gap: 12px;
+        }
+
+        .mobile-btn {
+            background: #f1f5f9;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: url('/img/image\ 3.png') center/cover no-repeat;
+            margin-top: 0;
+            padding: 80px 0 0 0;
+            position: relative;
+            min-height: 580px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            max-width: 700px;
+            padding: 40px 0 60px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            color: #e2f0ea;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e8f0ed;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #0f5e3f;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0f5e3f;
+        }
+
+        .hero-nav {
+            position: relative;
+            z-index: 2;
+            background: transparent;
+            padding: 20px 0 30px;
+            margin-top: auto;
+        }
+
+        .nav-lines {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-line-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-line-item a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-line {
+            height: 2px;
+            background: rgba(26, 155, 110, 0.7);
+            margin-bottom: 10px;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .nav-line-item.active .nav-line {
+            background: #c06b4a;
+        }
+
+        .nav-line-item span {
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.3px;
+            transition: color 0.2s;
+            display: block;
+        }
+
+        .nav-line-item:hover .nav-line {
+            background: #c06b4a;
+        }
+
+        .nav-line-item:hover span {
+            color: white;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .page-title {
+            margin-bottom: 48px;
+        }
+
+        .page-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0a2b1f;
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .page-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1a9b6e;
+            border-radius: 2px;
+        }
+
+        .page-title p {
+            color: #475569;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0a2b1f;
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eef2ff;
+        }
+
+        .section-title i {
+            color: #1a9b6e;
+            margin-right: 12px;
+        }
+
+        .town-card {
+            background: white;
+            border-radius: 24px;
+            padding: 28px;
+            margin-bottom: 32px;
+            border: 1px solid #eef2ff;
+            transition: all 0.3s;
+        }
+
+        .town-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            border-color: #1a9b6e;
+        }
+
+        .town-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .town-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0a2b1f;
+        }
+
+        .town-name i {
+            color: #1a9b6e;
+            font-size: 24px;
+            margin-right: 12px;
+        }
+
+        .town-type {
+            background: #f0fdf4;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a9b6e;
+        }
+
+        .town-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eef2ff;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .stat i {
+            color: #1a9b6e;
+            width: 18px;
+        }
+
+        .town-description {
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .map-container {
+            margin: 20px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #eef2ff;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 280px;
+            border: none;
+            display: block;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 32px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #64748b;
+            transition: color 0.3s;
+            z-index: 10;
+            background: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            color: #1a9b6e;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 32px 32px 0 0;
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        .modal-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0a2b1f;
+            margin-bottom: 12px;
+        }
+
+        .modal-type {
+            display: inline-block;
+            background: #f0fdf4;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 12px;
+            color: #1a9b6e;
+            margin-bottom: 16px;
+        }
+
+        .modal-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eef2ff;
+        }
+
+        .modal-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #475569;
+        }
+
+        .modal-stat i {
+            color: #1a9b6e;
+        }
+
+        .modal-description {
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .modal-map {
+            margin-top: 16px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .modal-map iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+
+        .villages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .village-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #eef2ff;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        .village-card:hover {
+            transform: translateY(-3px);
+            border-color: #1a9b6e;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .village-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0a2b1f;
+            margin-bottom: 8px;
+        }
+
+        .village-name i {
+            color: #1a9b6e;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .village-info {
+            font-size: 13px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+        .editorial {
+            background: #f8fafc;
+            border-radius: 32px;
+            padding: 48px;
+            margin: 64px 0;
+            border-left: 6px solid #1a9b6e;
+        }
+
+        .editorial h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .editorial p {
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .editorial a {
+            color: #1a9b6e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #1a9b6e;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #1e293b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-lines {
+                gap: 12px;
+            }
+
+            .nav-line-item span {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .hero {
+                min-height: 500px;
+                padding: 40px 0 0 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero-content {
+                text-align: center;
+                padding: 20px 0 30px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .search-wrapper {
+                display: none;
+            }
+
+            .mobile-buttons {
+                display: flex;
+            }
+
+            .nav-lines {
+                gap: 12px;
+            }
+
+            .nav-line-item {
+                min-width: calc(25% - 9px);
+            }
+
+            .nav-line-item span {
+                font-size: 9px;
+            }
+
+            .page-title h2 {
+                font-size: 28px;
+            }
+
+            .page-title p {
+                font-size: 14px;
+            }
+
+            .town-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .town-name {
+                font-size: 24px;
+            }
+
+            .town-stats {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .map-container iframe {
+                height: 200px;
+            }
+
+            .villages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .editorial {
+                padding: 32px;
+            }
+
+            .editorial h3 {
+                font-size: 22px;
+            }
+
+            .modal-content {
+                width: 95%;
+            }
+
+            .modal-image {
+                height: 160px;
+            }
+
+            .modal-title {
+                font-size: 24px;
+            }
+
+            .modal-map iframe {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-outline {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .nav-line-item {
+                min-width: calc(50% - 6px);
+            }
+
+            .nav-line-item span {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#main" class="skip-link">Перейти к основному контенту</a>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><img src="/img/image 1.png" alt="Татнефть"></div>
+                    <div class="logo-text">
+                        <h1>Альметьевская энциклопедия</h1>
+                        <p>история • культура • наследие</p>
+                    </div>
+                </a>
+
+                <div class="mobile-buttons">
+                    <button class="mobile-btn" id="mobileSearchBtn"><i class="fas fa-search"></i></button>
+                    <button class="mobile-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-map-marker-alt"></i> География и история</span>
+                <h1>Населённые пункты<br>Альметьевского района</h1>
+                <p>Города, сёла и деревни района — история каждого поселения, современное состояние,
+                    достопримечательности и известные жители.</p>
+                <div class="hero-buttons">
+                    <a href="#gorod" class="btn-primary">Города →</a>
+                    <a href="#sela" class="btn-outline">Сёла и деревни</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-nav">
+            <div class="container">
+                <div class="nav-lines">
+                    <div class="nav-line-item" data-section="almetevskiy-rayon">
+                        <a href="index.html">
+                            <div class="nav-line"></div>
+                            <span>Альметьевский район</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="naselennie-punkti">
+                        <a href="naselenniye_punkty.html">
+                            <div class="nav-line"></div>
+                            <span>Населённые пункты</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="istoriya">
+                        <a href="istoriya.html">
+                            <div class="nav-line"></div>
+                            <span>История</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="kultura">
+                        <a href="kultura.html">
+                            <div class="nav-line"></div>
+                            <span>Культура</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="proizvodstvo">
+                        <a href="proizvodstvo.html">
+                            <div class="nav-line"></div>
+                            <span>Производство</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="sotsialnaya-sfera">
+                        <a href="sotsialnaya-sfera.html">
+                            <div class="nav-line"></div>
+                            <span>Социальная сфера</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="personalii">
+                        <a href="personalii.html">
+                            <div class="nav-line"></div>
+                            <span>Персоналии</span>
+                        </a>
+                    </div>
+                    <div class="nav-line-item" data-section="spisok-sokrashcheniy">
+                        <a href="spisok-sokrashcheniy.html">
+                            <div class="nav-line"></div>
+                            <span>Список сокращений</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <div class="container">
+            <div class="page-title">
+                <h2><i class="fas fa-city"></i> Населённые пункты</h2>
+                <p>Альметьевский район объединяет 1 город, 38 сёл и более 40 деревень. Каждый населённый пункт имеет
+                    свою уникальную историю, традиции и достопримечательности.</p>
+            </div>
+
+            <div id="gorod">
+                <h2 class="section-title"><i class="fas fa-building"></i> Города</h2>
+
+                <div class="town-card">
+                    <div class="town-header">
+                        <h3 class="town-name"><i class="fas fa-city"></i> Альметьевск</h3>
+                        <span class="town-type">город республиканского значения</span>
+                    </div>
+                    <div class="town-stats">
+                        <div class="stat"><i class="fas fa-calendar-alt"></i> Основан: 1953 год</div>
+                        <div class="stat"><i class="fas fa-users"></i> Население: ~160 000 человек</div>
+                        <div class="stat"><i class="fas fa-map-marker-alt"></i> Площадь: 115 км²</div>
+                        <div class="stat"><i class="fas fa-oil-can"></i> Крупнейший центр нефтяной промышленности</div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=52.2965,54.9014&z=12&l=map"
+                            allowfullscreen="true" loading="lazy" title="Карта Альметьевска">
+                        </iframe>
+                    </div>
+                    <p class="town-description">Альметьевск — третий по величине город Татарстана, крупный центр
+                        нефтяной промышленности. Город возник в связи с открытием и разработкой Ромашкинского нефтяного
+                        месторождения. Сегодня это современный город с развитой инфраструктурой, многочисленными
+                        культурными и спортивными объектами.</p>
+                </div>
+            </div>
+
+            <div id="sela">
+                <h2 class="section-title"><i class="fas fa-tree"></i> Сёла</h2>
+
+                <div class="town-card" onclick="openModal('abdrakhmanovo')" style="cursor: pointer;">
+
+                    <div class="town-header">
+                        <h3 class="town-name"><i class="fas fa-home"></i> Абдрахманово</h3>
+                        <span class="town-type">село</span>
+                    </div>
+                    <div class="town-stats">
+                        <div class="stat"><i class="fas fa-calendar-alt"></i> Основано: XVIII век</div>
+                        <div class="stat"><i class="fas fa-users"></i> Население: ~1 500 человек</div>
+                    </div>
+                    <p class="town-description">Одно из старейших сел района, основанное в XVIII веке. Здесь сохранились
+                        памятники архитектуры, мечеть XIX века. Село славится своими традициями и гостеприимством.</p>
+                </div>
+
+                <div class="town-card" onclick="openModal('yelhovo')" style="cursor: pointer;">
+                    <div class="town-header">
+                        <h3 class="town-name"><i class="fas fa-home"></i> Елхово</h3>
+                        <span class="town-type">село</span>
+                    </div>
+                    <div class="town-stats">
+                        <div class="stat"><i class="fas fa-calendar-alt"></i> Основано: 1740-е годы</div>
+                        <div class="stat"><i class="fas fa-users"></i> Население: ~2 000 человек</div>
+                    </div>
+                    <p class="town-description">Известно своими природными красотами и историческим наследием. В
+                        окрестностях села находятся живописные леса, сосновые боры и родники.</p>
+                </div>
+
+                <div class="town-card" onclick="openModal('kuzaykino')" style="cursor: pointer;">
+                    <div class="town-header">
+                        <h3 class="town-name"><i class="fas fa-home"></i> Кузайкино</h3>
+                        <span class="town-type">село</span>
+                    </div>
+                    <div class="town-stats">
+                        <div class="stat"><i class="fas fa-calendar-alt"></i> Основано: XVIII век</div>
+                        <div class="stat"><i class="fas fa-users"></i> Население: ~2 200 человек</div>
+                    </div>
+                    <p class="town-description">Крупный сельский населенный пункт с развитой социальной инфраструктурой.
+                        Здесь находится одна из старейших школ района и дом культуры с богатой историей.</p>
+                </div>
+
+                <div class="town-card" onclick="openModal('russkiy-aktash')" style="cursor: pointer;">
+                    <div class="town-header">
+                        <h3 class="town-name"><i class="fas fa-home"></i> Русский Акташ</h3>
+                        <span class="town-type">село</span>
+                    </div>
+                    <div class="town-stats">
+                        <div class="stat"><i class="fas fa-calendar-alt"></i> Основано: XVII век</div>
+                        <div class="stat"><i class="fas fa-users"></i> Население: ~1 200 человек</div>
+                    </div>
+                    <p class="town-description">Уникальный населенный пункт с интересной историей. Здесь сохранились
+                        старинные купеческие дома XIX века, а также действует краеведческий музей.</p>
+                </div>
+            </div>
+
+            <div id="derevni">
+                <h2 class="section-title"><i class="fas fa-leaf"></i> Деревни</h2>
+                <div class="villages-grid">
+                    <div class="village-card">
+                        <div class="village-name"><i class="fas fa-location-dot"></i> Акташ</div>
+                        <div class="village-info">живописная деревня на берегу реки, известна своими родниками</div>
+                    </div>
+                    <div class="village-card">
+                        <div class="village-name"><i class="fas fa-location-dot"></i> Верхний Акташ</div>
+                        <div class="village-info">старинное татарское село, богатые традиции и обряды</div>
+                    </div>
+                    <div class="village-card">
+                        <div class="village-name"><i class="fas fa-location-dot"></i> Дербедень</div>
+                        <div class="village-info">легенды и предания края, живописные окрестности</div>
+                    </div>
+                    <div class="village-card">
+                        <div class="village-name"><i class="fas fa-location-dot"></i> Зай-Каратай</div>
+                        <div class="village-info">богатая история, традиционная татарская культура</div>
+                    </div>
+                    <div class="village-card">
+                        <div class="village-name"><i class="fas fa-location-dot"></i> Кабанчик</div>
+                        <div class="village-info">небольшая уютная деревня в окружении лесов</div>
+                    </div>
+                    <div class="village-card">
+                        <div class="village-name"><i class="fas fa-location-dot"></i> Новая Михайловка</div>
+                        <div class="village-info">современное сельское поселение с развитой инфраструктурой</div>
+                    </div>
+                    <div class="village-card">
+                        <div class="village-name"><i class="fas fa-location-dot"></i> Старая Михайловка</div>
+                        <div class="village-info">историческое поселение с сохраненными традициями</div>
+                    </div>
+                    <div class="village-card">
+                        <div class="village-name"><i class="fas fa-location-dot"></i> Ямаш</div>
+                        <div class="village-info">гостеприимная деревня, родина известных земляков</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editorial">
+                <h3><i class="fas fa-book"></i> Дополнить энциклопедию</h3>
+                <p>Знаете интересные факты о населенных пунктах Альметьевского района? У вас есть старые фотографии,
+                    документы или воспоминания? Поделитесь своими знаниями с нашими читателями. Вместе мы сохраним
+                    историю малой родины для будущих поколений.</p>
+                <p><strong>Ваши дополнения и исправления очень важны для сохранения истории родного края.</strong>
+                    Просим направлять материалы по адресу <a href="mailto:Ruhiat@tatneft.ru">Ruhiat@tatneft.ru</a> или
+                    через форму «Дополнить энциклопедию».</p>
+                <p style="margin-top: 20px;">— <strong>Редакционная коллегия</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <div id="villageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeModal()">&times;</div>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <div class="modal-body">
+                <h3 id="modalTitle" class="modal-title"></h3>
+                <span id="modalType" class="modal-type"></span>
+                <div id="modalStats" class="modal-stats"></div>
+                <p id="modalDescription" class="modal-description"></p>
+                <div id="modalMap" class="modal-map"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>О проекте</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">Альметьевская энциклопедия — уникальный краеведческий
+                        ресурс, созданный при поддержке ПАО «Татнефть».</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="index.html">Альметьевский район</a></li>
+                        <li><a href="istoriya.html">История</a></li>
+                        <li><a href="kultura.html">Культура</a></li>
+                        <li><a href="personalii.html">Персоналии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="spisok-sokrashcheniy.html">Список сокращений</a></li>
+                        <li><a href="#">Правовая информация</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="mailto:Ruhiat@tatneft.ru">Ruhiat@tatneft.ru</a></li>
+                        <li><a href="#">Дополнить энциклопедию</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2006—2026 ПАО «Татнефть». Все права защищены.</p>
+                <p style="margin-top: 8px; font-size: 12px;">Альметьевская энциклопедия — сохраняя историю для будущих
+                    поколений</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const villagesData = {
+            abdrakhmanovo: {
+                name: 'Абдрахманово',
+                type: 'село',
+                image: 'https://avatars.mds.yandex.net/i?id=612a7ff537fbe02e6bb4b8155269d044_l-9065942-images-thumbs&n=13',
+                founded: 'XVIII век',
+                population: '~1 500 человек',
+                description: 'Одно из старейших сел района, основанное в XVIII веке. Здесь сохранились памятники архитектуры, мечеть XIX века. Село славится своими традициями, гостеприимством и развитым сельским хозяйством. В окрестностях села находятся живописные луга и леса.',
+                mapUrl: 'https://yandex.ru/map-widget/v1/?ll=52.4231,54.7128&z=13&l=map'
+            },
+            yelhovo: {
+                name: 'Елхово',
+                type: 'село',
+                image: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%95%D0%BB%D1%85%D0%BE%D0%B2%D0%BE_%D0%90%D0%BB%D1%8C%D0%BC%D0%B5%D1%82%D1%8C%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD.jpg',
+                founded: '1740-е годы',
+                population: '~2 000 человек',
+                description: 'Известно своими природными красотами и историческим наследием. В окрестностях села находятся живописные леса, сосновые боры и родники, привлекающие туристов и любителей природы. В селе действует школа с богатой историей и дом культуры.',
+                mapUrl: 'https://yandex.ru/map-widget/v1/?ll=52.4365,54.6532&z=13&l=map'
+            },
+            kuzaykino: {
+                name: 'Кузайкино',
+                type: 'село',
+                image: 'https://avatars.mds.yandex.net/i?id=98fa47dbeac1fd39f789e9cc03efd08d_l-5216254-images-thumbs&n=13',
+                founded: 'XVIII век',
+                population: '~2 200 человек',
+                description: 'Крупный сельский населенный пункт с развитой социальной инфраструктурой. Здесь находится одна из старейших школ района (основана в XIX веке) и дом культуры с богатой историей. Село известно своими традициями и активными жителями.',
+                mapUrl: 'https://yandex.ru/map-widget/v1/?ll=52.3445,54.5762&z=13&l=map'
+            },
+            'russkiy-aktash': {
+                name: 'Русский Акташ',
+                type: 'село',
+                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%90%D0%BA%D1%82%D0%B0%D1%88._%D0%91%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D0%B0.jpg/1280px-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%90%D0%BA%D1%82%D0%B0%D1%88._%D0%91%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D0%B0.jpg',
+                founded: 'XVII век',
+                population: '~1 200 человек',
+                description: 'Уникальный населенный пункт с интересной историей. Здесь сохранились старинные купеческие дома XIX века, а также действует краеведческий музей, рассказывающий об истории края. Село славится своими ремесленниками и народными промыслами.',
+                mapUrl: 'https://yandex.ru/map-widget/v1/?ll=52.4048,54.8381&z=13&l=map'
+            }
+        }
+
+        function openModal(villageId) {
+            const data = villagesData[villageId]
+            if (!data) return
+
+            document.getElementById('modalImage').src = data.image
+            document.getElementById('modalTitle').textContent = data.name
+            document.getElementById('modalType').textContent = data.type
+
+            const statsHtml = `
+                <div class="modal-stat"><i class="fas fa-calendar-alt"></i> Основано: ${data.founded}</div>
+                <div class="modal-stat"><i class="fas fa-users"></i> Население: ${data.population}</div>
+            `
+            document.getElementById('modalStats').innerHTML = statsHtml
+            document.getElementById('modalDescription').textContent = data.description
+            document.getElementById('modalMap').innerHTML = `<iframe src="${data.mapUrl}" allowfullscreen="true" loading="lazy" title="Карта ${data.name}"></iframe>`
+
+            const modal = document.getElementById('villageModal')
+            modal.classList.add('show')
+            document.body.style.overflow = 'hidden'
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('villageModal')
+            modal.classList.remove('show')
+            document.body.style.overflow = ''
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('villageModal')
+            if (event.target === modal) {
+                closeModal()
+            }
+        }
+
+        const currentPage = window.location.pathname.split('/').pop() || 'naselenniye_punkty.html'
+
+        const navLinks = document.querySelectorAll('.nav-line-item a')
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href')
+            if (href === currentPage) {
+                const parentItem = link.closest('.nav-line-item')
+                if (parentItem) {
+                    parentItem.classList.add('active')
+                }
+            }
+        })
+
+        const searchBtn = document.getElementById('mobileSearchBtn')
+        const menuBtn = document.getElementById('mobileMenuBtn')
+
+        if (searchBtn) {
+            searchBtn.addEventListener('click', () => {
+                alert('Поиск по энциклопедии — введите запрос')
+            })
+        }
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const navLines = document.querySelector('.nav-lines')
+                if (navLines) {
+                    navLines.style.display = navLines.style.display === 'flex' ? 'none' : 'flex'
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
